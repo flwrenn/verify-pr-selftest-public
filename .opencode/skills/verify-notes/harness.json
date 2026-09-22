@@ -1,0 +1,8 @@
+{
+  "surface": "web",
+  "launch": "node app/server.js",
+  "ready": { "path": "/health" },
+  "doctor": "node -e \"fetch(process.env.VERIFY_URL + '/health').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))\"",
+  "stop": null,
+  "publish": "artifacts-repo"
+}
